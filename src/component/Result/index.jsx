@@ -13,11 +13,11 @@ export default function Result({ search }) {
 
   if (result.status === 404) {
     return (
-      <>
+      <div id="result">
         <p>{result.title}</p>
         <p>{result.message}</p>
         <p>{result.resolution}</p>
-      </>
+      </div>
     );
   }
 
