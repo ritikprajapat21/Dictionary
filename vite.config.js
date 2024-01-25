@@ -5,4 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   base: "/Dictionary/",
   plugins: [react()],
+  server: {
+    port: 3000,
+  },
 });
