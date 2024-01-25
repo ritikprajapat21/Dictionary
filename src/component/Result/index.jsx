@@ -2,15 +2,13 @@ import useFetchQuery from "../../utils/useFetch";
 
 export default function Result({ search }) {
   const { result, isLoading } = useFetchQuery(search);
-  // const re = useFetchQuery(search);
-  // console.log(re);
 
   if (search === "") {
-    return <p>Type a word</p>;
+    return <p id="result">Type a word</p>;
   }
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <p id="result">Loading...</p>;
   }
 
   if (result.status === 404) {
@@ -24,10 +22,9 @@ export default function Result({ search }) {
   }
 
   return (
-    <>
+    <div id="result">
       <h2>{result?.word}</h2>
       {result?.phonetics?.map((phonetic, idx) => {
-        console.log(phonetic);
         if (phonetic.text) {
           return (
             <div key={idx}>
@@ -76,6 +73,6 @@ export default function Result({ search }) {
           )}
         </div>
       ))}
-    </>
+    </div>
   );
 }

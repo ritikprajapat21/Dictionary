@@ -1,12 +1,13 @@
 .search {
     border: none;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 1em;
+    padding: 1em;
     display: inline-block;
     background: url("../../assets/search.svg") no-repeat right;
-    background-position: 267px 7px;
-    width: 300px;
-    background-color: #d3d3d3;
+    background-position: 22.3em 0.75em;
+    width: 22em;
+    background-color: #e3e3e3;
+    font: inherit;
 }
 
 .search::placeholder {
@@ -14,13 +15,11 @@
 }
 
 .search:hover, .search:focus {
-    background-color: #33333369;
+    background-color: #d3d3d3;
 }
 
 .search:focus-visible {
     outline: none;
-    box-shadow: 3px 4px 4px 2px;
-    color: #4f4747;
 }
 
 .search:focus {
@@ -52,7 +51,8 @@
     border: none;
 }
 
-/* search-element {
+.search-element {
     display: flex;
-    flex-direction: row;
-} */
+    justify-content: center;
+    align-items: center;
+}

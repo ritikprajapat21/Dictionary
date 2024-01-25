@@ -1,0 +1,48 @@
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    align-items: stretch;
+}
+
+#header img {
+    margin-left: 8em;
+    width: 50px;
+}
+
+#header select {
+    margin-right: 1em;
+    border: none;
+    background-color: #e3e3e3;
+    border-radius: 0.9em;
+    font: inherit;
+    padding: 0.5em;
+}
+
+#header select:focus-visible {
+    outline: none;
+    background-color: #d3d3d3;
+    box-shadow: 3px 4px 4px 2px;
+}
+
+#header select:hover, #header select:focus {
+    background-color: #d3d3d3;
+}
+
+@media all and (max-width: 500px) {
+    #header img {
+        margin-left: -2em;
+    }
+
+    #header select {
+        margin-right: -2em;
+    }
+}
+
+@media all and (min-width: 500px) {
+    #header img {
+        margin-left: 3em;
+    }
+}
